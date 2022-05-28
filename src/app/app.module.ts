@@ -8,6 +8,9 @@ import { SocialComponent } from './components/social/social.component';
 import { AboutComponent } from './components/about/about.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { EducationComponent } from './components/education/education.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { ExperienceComponent } from './components/experience/experience.componen
     SocialComponent,
     AboutComponent,
     BannerComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    EducationComponent,
+    SkillsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
