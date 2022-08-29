@@ -1,17 +1,42 @@
 <div class="row">
-    <div class="container">
-        <div class="logo">
-            <img id="log" src="../../../assets/AppLogo.png" alt="Logo">
-        </div>
-
-        <div class="redes">
-            <a href="https://github.com/franfront"><img src="../../../assets/github.png" id="github" alt="Logo de Github"></a>
-            <a href="https://twitter.com/Erebo399"><img src="../../../assets/twitter.png" id="twitter" alt="Logo de Twitter"></a>
-            <a href="https://www.linkedin.com/in/franco-agustin-fern%C3%A1ndez-5b87a5198/"><img src="../../../assets/linkedin.png" id="linkedin" alt="Logo de linkedin"></a>
-            <button (click)="login()" type="button" class="btn btn-outline-success">Acceso</button>
-        </div>
-
+  <div class="container">
+    <div class="logo">
+      <img id="log" src="../../../assets/AppLogo.png" alt="Logo" />
     </div>
+
+    <div class="redes">
+      <a href="https://github.com/franfront"
+        ><img src="../../../assets/github.png" id="github" alt="Logo de Github"
+      /></a>
+      <a href="https://twitter.com/Erebo399"
+        ><img
+          src="../../../assets/twitter.png"
+          id="twitter"
+          alt="Logo de Twitter"
+      /></a>
+      <a
+        href="https://www.linkedin.com/in/franco-agustin-fern%C3%A1ndez-5b87a5198/"
+        ><img
+          src="../../../assets/linkedin.png"
+          id="linkedin"
+          alt="Logo de linkedin"
+      /></a>
+      <button
+        (click)="login()"
+        *ngIf="!isLogged"
+        type="button"
+        class="btn btn-outline-success"
+      >
+        Acceso
+      </button>
+      <button
+        (click)="onLogOut()"
+        *ngIf="isLogged"
+        type="button"
+        class="btn btn-outline-success"
+      >
+        Cerrar Sesion
+      </button>
+    </div>
+  </div>
 </div>
-
-
