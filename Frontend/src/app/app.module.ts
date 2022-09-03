@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './components/experience/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experience/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
   ],
   imports: [
     BrowserModule,
