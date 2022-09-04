@@ -1,15 +1,42 @@
 <div class="row">
-    <h1>Educación:</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-      <ul>
-        <li>
-            <h2>Terciario: Tecnicatura en Programación, UTN.</h2> - <h3>Estado: year</h3>
-        </li>
-        <li>
-          <h2>Secundario: Escuela de Educación Secundaria Número 5. Modalidad: Ciencias sociales.</h2> - <h3>Estado:</h3>
-        </li>
-      </ul>
-    </div>
+  <h1>Educacion</h1>
+
+  <div class="col-lg-2">
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/nuevaeduc"
+      *ngIf="isLogged"
+    >
+      Agregar Educacion
+    </button>
   </div>
-  
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let educ of educacion">
+          <td>
+            <h3>{{ educ.nombreE }}</h3>
+          </td>
+          <td>{{ educ.descripcionE }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-success"
+              routerLink="/editeduc/{{ educ.id }}"
+            >
+              <i class="bi bi-pencil-square"></i>Editar
+            </button>
+          </td>
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(educ.id)">
+              <i class="bi bi-trash-fill"></i>Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
