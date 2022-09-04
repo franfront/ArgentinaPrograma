@@ -20,6 +20,9 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { NewExperienciaComponent } from './components/experience/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experience/edit-experiencia.component';
+import { NewEducacionComponent } from './components/education/new-educacion.component';
+import { EditeducacionComponent } from './components/education/editeducacion.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +40,8 @@ import { EditExperienciaComponent } from './components/experience/edit-experienc
     LoginComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
+    NewEducacionComponent,
+    EditeducacionComponent,
   ],
   imports: [
     BrowserModule,
